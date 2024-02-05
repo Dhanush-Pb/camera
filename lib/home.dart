@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> {
                 itemCount: file.data!.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
+                  
                 ),
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.all(10),
@@ -59,12 +60,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                       );
                     },
-                    child: Container(
-                      color: Color.fromARGB(255, 103, 103, 103),
-                      child: Card(
-                        child: GridTile(
-                          child: Image.file(file.data![index]),
-                        ),
+                    child: Card(
+                      child: GridTile(
+                        child: Image.file(file.data![index]),
                       ),
                     ),
                   ),
